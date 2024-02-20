@@ -39,6 +39,7 @@ mod tests {
     use crate::generate_schema::{generate_schema_json, FILE, FOLDER};
     use std::path::Path;
     use std::{env, fs};
+    use pretty_assertions::assert_eq;
 
     // If this test fails, run `cargo run -- generate-schema` to update the schema.
     #[test]
@@ -65,7 +66,8 @@ mod tests {
         // Windows-friendly comparison
         assert_eq!(
             existing_json.replace("\r\n", "\n"),
-            new_json.replace("\r\n", "\n")
+            new_json.replace("\r\n", "\n"),
+            "if change is intentional run `cargo run -- generate-schema` to update it."
         );
     }
 }
