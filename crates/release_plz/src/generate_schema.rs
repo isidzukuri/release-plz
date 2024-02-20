@@ -37,9 +37,9 @@ fn generate_schema_json() -> anyhow::Result<String> {
 #[cfg(test)]
 mod tests {
     use crate::generate_schema::{generate_schema_json, FILE, FOLDER};
+    use pretty_assertions::assert_eq;
     use std::path::Path;
     use std::{env, fs};
-    use pretty_assertions::assert_eq;
 
     // If this test fails, run `cargo run -- generate-schema` to update the schema.
     #[test]
