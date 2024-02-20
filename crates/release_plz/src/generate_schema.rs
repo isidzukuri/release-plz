@@ -67,7 +67,7 @@ mod tests {
         assert_eq!(
             existing_json.replace("\r\n", "\n"),
             new_json.replace("\r\n", "\n"),
-            "if change is intentional run `cargo run -- generate-schema` to update it."
+            "(Hint: if change is intentional run `cargo run -- generate-schema` to update schema.)"
         );
     }
 }
